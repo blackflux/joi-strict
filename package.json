@@ -17,7 +17,13 @@
     "type": "git",
     "url": "https://github.com/blackflux/joi-strict.git"
   },
-  "keywords": [],
+  "keywords": [
+    "joi",
+    "strict",
+    "validation",
+    "extension",
+    "schema"
+  ],
   "author": "Lukas Siemon",
   "license": "MIT",
   "bugs": {
