@@ -1,0 +1,88 @@
+{
+  "name": "joi-strict",
+  "version": "0.0.0-development",
+  "description": "Thin wrapper around joi that defaults to stricter validation.",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc",
+    "build-clean": "npm run clean && npm run build",
+    "test-simple": "nyc mocha \"./test/**/*.spec.js\"",
+    "test": "npm run clean && npm run gardener && npm run test-simple",
+    "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
+    "semantic-release": "npm run build-clean && npx semantic-release",
+    "gardener": "node gardener"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blackflux/joi-strict.git"
+  },
+  "keywords": [],
+  "author": "Lukas Siemon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackflux/joi-strict/issues"
+  },
+  "homepage": "https://github.com/blackflux/joi-strict#readme",
+  "devDependencies": {
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.4",
+    "@babel/register": "7.4.4",
+    "@blackflux/eslint-plugin-rules": "1.0.14",
+    "@blackflux/robo-config-plugin": "1.9.2",
+    "@hapi/joi": "15.0.3",
+    "babel-eslint": "10.0.1",
+    "chai": "4.2.0",
+    "coveralls": "3.0.3",
+    "eslint": "5.16.0",
+    "js-gardener": "2.0.30",
+    "nyc": "14.1.1",
+    "semantic-release": "15.13.12"
+  },
+  "peerDependencies": {
+    "@hapi/joi": "^15.0.3"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/blackflux/joi-strict/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 8.10"
+  },
+  "files": [
+    "lib"
+  ],
+  "nyc": {
+    "exclude": [
+      "gardener.js",
+      "node_modules/*",
+      "coverage/*",
+      "lib/*"
+    ],
+    "all": true,
+    "babel": true,
+    "branches": 100,
+    "cache": true,
+    "check-coverage": true,
+    "extension": [],
+    "functions": 100,
+    "include": [
+      "**/*.js"
+    ],
+    "lines": 100,
+    "per-file": false,
+    "report-dir": "./coverage",
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "statements": 100,
+    "tempDir": "./coverage/.nyc_output"
+  }
+}
