@@ -3,11 +3,12 @@ const Joi = require('../src/index');
 
 describe('Testing Strict Mode', () => {
   const validated = (schema, input, expectedErrorMessage = null) => {
-    // todo: check validation error
+    const error = schema.validate(input).error;
     if (expectedErrorMessage === null) {
-      expect(schema.validate(input).error).to.equal(null);
+      expect(error).to.equal(null);
     } else {
-      expect(schema.validate(input).error.message).to.equal(expectedErrorMessage);
+      expect(error.name).to.equal('ValidationError');
+      expect(error.message).to.equal(expectedErrorMessage);
     }
   };
 
