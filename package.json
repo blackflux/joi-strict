@@ -11,24 +11,22 @@
     "test": "npm run clean && npm run gardener && npm run test-simple",
     "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
     "semantic-release": "npm run build-clean && npx semantic-release",
-    "gardener": "node gardener"
+    "gardener": "node gardener",
+    "docker": "docker run -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
+    "yu": "yarn upgrade --latest --force",
+    "yi": "yarn install --frozen-lockfile",
+    "t": "yarn test",
+    "ts": "yarn run test-simple",
+    "tsv": "yarn run test-simple --verbose"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/blackflux/joi-strict.git"
   },
-  "keywords": [
-    "joi",
-    "strict",
-    "validation",
-    "extension",
-    "schema"
-  ],
+  "keywords": ["joi", "strict", "validation", "extension", "schema"],
   "author": "Lukas Siemon",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/blackflux/joi-strict/issues"
-  },
+  "bugs": {"url": "https://github.com/blackflux/joi-strict/issues"},
   "homepage": "https://github.com/blackflux/joi-strict#readme",
   "devDependencies": {
     "@babel/cli": "7.5.5",
@@ -36,38 +34,27 @@
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",
     "@babel/register": "7.5.5",
     "@blackflux/eslint-plugin-rules": "1.0.23",
-    "@blackflux/robo-config-plugin": "2.0.1",
+    "@blackflux/robo-config-plugin": "2.1.3",
     "@hapi/joi": "15.1.0",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
     "coveralls": "3.0.5",
-    "eslint": "6.0.1",
-    "js-gardener": "2.0.51",
+    "eslint": "6.1.0",
+    "js-gardener": "2.0.52",
     "nyc": "14.1.1",
     "semantic-release": "15.13.18"
   },
-  "peerDependencies": {
-    "@hapi/joi": "^15.0.3"
-  },
+  "peerDependencies": {"@hapi/joi": "^15.0.3"},
   "licenses": [
     {
       "type": "MIT",
       "url": "https://github.com/blackflux/joi-strict/blob/master/LICENSE"
     }
   ],
-  "engines": {
-    "node": ">= 8.10"
-  },
-  "files": [
-    "lib"
-  ],
+  "engines": {"node": ">= 8.10"},
+  "files": ["lib"],
   "nyc": {
-    "exclude": [
-      "gardener.js",
-      "node_modules/*",
-      "coverage/*",
-      "lib/*"
-    ],
+    "exclude": ["gardener.js", "node_modules/*", "coverage/*", "lib/*"],
     "all": true,
     "babel": true,
     "branches": 100,
@@ -75,19 +62,12 @@
     "check-coverage": true,
     "extension": [],
     "functions": 100,
-    "include": [
-      "**/*.js"
-    ],
+    "include": ["**/*.js"],
     "lines": 100,
     "per-file": false,
     "report-dir": "./coverage",
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "require": [
-      "@babel/register"
-    ],
+    "reporter": ["lcov", "text-summary"],
+    "require": ["@babel/register"],
     "statements": 100,
     "tempDir": "./coverage/.nyc_output"
   }

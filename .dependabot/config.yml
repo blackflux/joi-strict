@@ -12,3 +12,7 @@ update_configs:
           dependency_type: production
           update_type: all
     version_requirement_updates: increase_versions
+    commit_message:
+      prefix: fix
+      prefix_development: chore
+      include_scope: true
