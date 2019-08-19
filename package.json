@@ -40,7 +40,7 @@
     "chai": "4.2.0",
     "coveralls": "3.0.6",
     "eslint": "6.2.0",
-    "js-gardener": "2.0.67",
+    "js-gardener": "2.0.68",
     "nyc": "14.1.1",
     "semantic-release": "15.13.21",
     "eslint-config-airbnb-base": "14.0.0",
