@@ -5,7 +5,7 @@ describe('Testing Strict Mode', () => {
   const validated = (schema, input, expectedErrorMessage = null) => {
     // todo: check validation error
     if (expectedErrorMessage === null) {
-      expect(schema.validate(input).error).to.equal(null);
+      expect(schema.validate(input).error).to.equal(undefined);
     } else {
       expect(schema.validate(input).error.message).to.equal(expectedErrorMessage);
     }
@@ -31,7 +31,7 @@ describe('Testing Strict Mode', () => {
     validated(
       Joi.object().keys({ a: Joi.string() }),
       {},
-      'child "a" fails because ["a" is required]'
+      '"a" is required'
     );
   });
 
@@ -39,7 +39,7 @@ describe('Testing Strict Mode', () => {
     validated(
       Joi.object().keys({ a: Joi.object().keys({ b: Joi.string() }) }),
       { a: {} },
-      'child "a" fails because [child "b" fails because ["b" is required]]'
+      '"a.b" is required'
     );
   });
 
