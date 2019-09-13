@@ -56,4 +56,22 @@ describe('Testing Strict Mode', () => {
       { a: 'thing' }
     );
   });
+
+  describe('Testing Joi.test()', () => {
+    it('Testing true', () => {
+      expect(Joi.test('string', Joi.string())).to.equal(true);
+    });
+
+    it('Testing false', () => {
+      expect(Joi.test('', Joi.number())).to.equal(false);
+    });
+
+    it('Testing not a schema (object)', () => {
+      expect(() => Joi.test({}, {})).to.throw('Not a Joi schema: {}');
+    });
+
+    it('Testing not a schema (string)', () => {
+      expect(() => Joi.test({}, 'string')).to.throw('Not a Joi schema: string');
+    });
+  });
 });
