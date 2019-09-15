@@ -1,4 +1,5 @@
 const expect = require('chai').expect;
+const JoiOriginal = require('@hapi/joi');
 const Joi = require('../src/index');
 
 describe('Testing Strict Mode', () => {
@@ -56,6 +57,11 @@ describe('Testing Strict Mode', () => {
       Joi.object().keys({}).unknown(true),
       { a: 'thing' }
     );
+  });
+
+  it('Testing Joi.test is not overwritten', () => {
+    expect(JoiOriginal.test).to.equal(undefined);
+    expect(Joi.test).to.not.equal(undefined);
   });
 
   describe('Testing Joi.test()', () => {
