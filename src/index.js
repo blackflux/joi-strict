@@ -1,10 +1,6 @@
-const JoiOriginal = require('@hapi/joi');
-const assert = require('assert');
-
-const Joi = JoiOriginal.defaults((schema) => schema.options({
+const Joi = require('@hapi/joi').defaults((schema) => schema.options({
   presence: 'required'
 }));
-assert(Joi.test === undefined);
 
 module.exports = {
   test: (object, schema) => {

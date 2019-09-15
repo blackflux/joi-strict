@@ -1,13 +1,15 @@
 const expect = require('chai').expect;
+const JoiOriginal = require('@hapi/joi');
 const Joi = require('../src/index');
 
 describe('Testing Strict Mode', () => {
   const validated = (schema, input, expectedErrorMessage = null) => {
-    // todo: check validation error
+    const error = schema.validate(input).error;
     if (expectedErrorMessage === null) {
-      expect(schema.validate(input).error).to.equal(undefined);
+      expect(error).to.equal(undefined);
     } else {
-      expect(schema.validate(input).error.message).to.equal(expectedErrorMessage);
+      expect(error.name).to.equal('ValidationError');
+      expect(error.message).to.equal(expectedErrorMessage);
     }
   };
 
@@ -55,6 +57,11 @@ describe('Testing Strict Mode', () => {
       Joi.object().keys({}).unknown(true),
       { a: 'thing' }
     );
+  });
+
+  it('Testing Joi.test is not overwritten', () => {
+    expect(JoiOriginal.test).to.equal(undefined);
+    expect(Joi.test).to.not.equal(undefined);
   });
 
   describe('Testing Joi.test()', () => {
