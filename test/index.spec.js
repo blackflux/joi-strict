@@ -5,7 +5,7 @@ describe('Testing Strict Mode', () => {
   const validated = (schema, input, expectedErrorMessage = null) => {
     const error = schema.validate(input).error;
     if (expectedErrorMessage === null) {
-      expect(error).to.equal(null);
+      expect(schema.validate(input).error).to.equal(undefined);
     } else {
       expect(error.name).to.equal('ValidationError');
       expect(error.message).to.equal(expectedErrorMessage);
@@ -32,7 +32,7 @@ describe('Testing Strict Mode', () => {
     validated(
       Joi.object().keys({ a: Joi.string() }),
       {},
-      'child "a" fails because ["a" is required]'
+      '"a" is required'
     );
   });
 
@@ -40,7 +40,7 @@ describe('Testing Strict Mode', () => {
     validated(
       Joi.object().keys({ a: Joi.object().keys({ b: Joi.string() }) }),
       { a: {} },
-      'child "a" fails because [child "b" fails because ["b" is required]]'
+      '"a.b" is required'
     );
   });
 
@@ -56,5 +56,23 @@ describe('Testing Strict Mode', () => {
       Joi.object().keys({}).unknown(true),
       { a: 'thing' }
     );
+  });
+
+  describe('Testing Joi.test()', () => {
+    it('Testing true', () => {
+      expect(Joi.test('string', Joi.string())).to.equal(true);
+    });
+
+    it('Testing false', () => {
+      expect(Joi.test('', Joi.number())).to.equal(false);
+    });
+
+    it('Testing not a schema (object)', () => {
+      expect(() => Joi.test({}, {})).to.throw('Not a Joi schema: {}');
+    });
+
+    it('Testing not a schema (string)', () => {
+      expect(() => Joi.test({}, 'string')).to.throw('Not a Joi schema: string');
+    });
   });
 });
