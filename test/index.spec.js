@@ -6,7 +6,7 @@ describe('Testing Strict Mode', () => {
   const validated = (schema, input, expectedErrorMessage = null) => {
     const error = schema.validate(input).error;
     if (expectedErrorMessage === null) {
-      expect(schema.validate(input).error).to.equal(undefined);
+      expect(error).to.equal(undefined);
     } else {
       expect(error.name).to.equal('ValidationError');
       expect(error.message).to.equal(expectedErrorMessage);
