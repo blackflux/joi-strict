@@ -205,6 +205,17 @@
     "@hapi/pinpoint" "1.x.x"
     "@hapi/topo" "3.x.x"
 
+"@hapi/joi@16.1.0":
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-16.1.0.tgz#20ddac20947d2b8f4d1b71272ea371425b711e43"
+  integrity sha512-7BADQEJCTj9jmY9JrpJHSXkdvzLANqIVqqihC//A4gLpajB8HPcqp4EbwxuKQP9kKfUf8/P7WV+q3rCiSJXSCw==
+  dependencies:
+    "@hapi/address" "2.x.x"
+    "@hapi/formula" "1.x.x"
+    "@hapi/hoek" "8.x.x"
+    "@hapi/pinpoint" "1.x.x"
+    "@hapi/topo" "3.x.x"
+
 "@hapi/pinpoint@1.x.x":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/pinpoint/-/pinpoint-1.0.2.tgz#025b7a36dbbf4d35bf1acd071c26b20ef41e0d13"
