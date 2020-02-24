@@ -81,4 +81,16 @@ describe('Testing Strict Mode', () => {
       expect(() => Joi.test({}, 'string')).to.throw('Not a Joi schema: string');
     });
   });
+
+  describe('Testing Joi.boolean() is strict()', () => {
+    it('Testing string not allowed', () => {
+      expect(Joi.test('true', Joi.boolean())).to.equal(false);
+      expect(Joi.test('false', Joi.boolean())).to.equal(false);
+    });
+
+    it('Testing boolean allowed', () => {
+      expect(Joi.test(true, Joi.boolean())).to.equal(true);
+      expect(Joi.test(false, Joi.boolean())).to.equal(true);
+    });
+  });
 });

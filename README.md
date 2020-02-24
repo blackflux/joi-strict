@@ -21,9 +21,10 @@ Install with [npm](https://www.npmjs.com/):
 
 The following changes to the default joi behaviour were made:
 
-- Every entry is required unless explicitly marked as [optional()](https://github.com/hapijs/joi/blob/v15.0.3/API.md#anyoptional).
-- Unknown object keys are not allowed unless explicitly market [unknown(true)](https://github.com/hapijs/joi/blob/v15.0.3/API.md#objectunknownallow).
+- Every entry is required unless explicitly marked as [optional()](https://hapi.dev/family/joi/api/#anyoptional).
+- Unknown object keys are not allowed unless explicitly market [unknown(true)](https://hapi.dev/family/joi/api/#objectunknownallow).
 - Additional function `Joi.test(object, schema)` to check if a schema matches an object
+- [boolean()](https://hapi.dev/family/joi/api/#boolean) automatically runs in [strict()](https://hapi.dev/family/joi/api/#anystrictisstrict) mode.
 
 ## Usage
 
