@@ -52,7 +52,7 @@
     "eslint-plugin-json": "2.1.0",
     "eslint-plugin-markdown": "1.0.2",
     "eslint-plugin-mocha": "6.3.0",
-    "js-gardener": "2.0.136",
+    "js-gardener": "2.0.137",
     "nyc": "15.0.0",
     "semantic-release": "17.0.4"
   },
@@ -99,6 +99,6 @@
     "tempDir": "./coverage/.nyc_output"
   },
   "dependencies": {
-    "@hapi/joi": "16.1.8"
+    "@hapi/joi": "17.1.0"
   }
 }
