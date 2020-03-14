@@ -99,6 +99,6 @@
     "tempDir": "./coverage/.nyc_output"
   },
   "dependencies": {
-    "@hapi/joi": "17.1.0"
+    "@hapi/joi": "17.1.1"
   }
 }
