@@ -10,5 +10,6 @@ module.exports = {
     return schema.validate(object).error === undefined;
   },
   ...Joi,
-  boolean: (...args) => Joi.boolean(...args).strict()
+  boolean: (...args) => Joi.boolean(...args).strict(),
+  number: (...args) => Joi.number(...args).strict()
 };

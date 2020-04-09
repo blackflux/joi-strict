@@ -24,7 +24,7 @@ The following changes to the default joi behaviour were made:
 - Every entry is required unless explicitly marked as [optional()](https://hapi.dev/family/joi/api/#anyoptional).
 - Unknown object keys are not allowed unless explicitly market [unknown(true)](https://hapi.dev/family/joi/api/#objectunknownallow).
 - Additional function `Joi.test(object, schema)` to check if a schema matches an object
-- [boolean()](https://hapi.dev/family/joi/api/#boolean) automatically runs in [strict()](https://hapi.dev/family/joi/api/#anystrictisstrict) mode.
+- [boolean()](https://hapi.dev/family/joi/api/#boolean) and [number()](https://hapi.dev/family/joi/api/#number) automatically runs in [strict()](https://hapi.dev/family/joi/api/#anystrictisstrict) mode.
 
 ## Usage
 

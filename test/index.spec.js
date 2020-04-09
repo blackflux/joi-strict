@@ -93,4 +93,16 @@ describe('Testing Strict Mode', () => {
       expect(Joi.test(false, Joi.boolean())).to.equal(true);
     });
   });
+
+  describe('Testing Joi.number() is strict()', () => {
+    it('Testing string not allowed', () => {
+      expect(Joi.test('1', Joi.number())).to.equal(false);
+      expect(Joi.test('2', Joi.number())).to.equal(false);
+    });
+
+    it('Testing number allowed', () => {
+      expect(Joi.test(1, Joi.number())).to.equal(true);
+      expect(Joi.test(2, Joi.number())).to.equal(true);
+    });
+  });
 });
