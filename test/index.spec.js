@@ -105,4 +105,14 @@ describe('Testing Strict Mode', () => {
       expect(Joi.test(2, Joi.number())).to.equal(true);
     });
   });
+
+  describe('Testing Joi.string() is lowercase()', () => {
+    it('Testing uppercase string not allowed', () => {
+      expect(Joi.test('STR', Joi.string().lowercase())).to.equal(false);
+    });
+
+    it('Testing lowercase string allowed', () => {
+      expect(Joi.test('str', Joi.string().lowercase())).to.equal(true);
+    });
+  });
 });
