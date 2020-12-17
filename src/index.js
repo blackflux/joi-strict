@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi').defaults((schema) => schema.options({
-  presence: 'required'
+  presence: 'required',
+  convert: false
 }));
 
 module.exports = {
