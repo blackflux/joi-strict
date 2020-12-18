@@ -1,6 +1,6 @@
 const Joi = require('@hapi/joi').defaults((schema) => schema.options({
   presence: 'required',
-  convert: false
+  convert: true
 }));
 
 module.exports = {
@@ -12,5 +12,6 @@ module.exports = {
   },
   ...Joi,
   boolean: (...args) => Joi.boolean(...args).strict(),
-  number: (...args) => Joi.number(...args).strict()
+  number: (...args) => Joi.number(...args).strict(),
+  string: (...args) => Joi.string(...args).strict()
 };
