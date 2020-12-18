@@ -115,4 +115,14 @@ describe('Testing Strict Mode', () => {
       expect(Joi.test('str', Joi.string().lowercase())).to.equal(true);
     });
   });
+
+  describe('Testing Joi.date() accepts string', () => {
+    it('Testing string allowed', () => {
+      expect(Joi.test('2020-06-04T09:42:17-07:00', Joi.date())).to.equal(true);
+    });
+
+    it('Testing date allowed', () => {
+      expect(Joi.test(new Date(), Joi.date())).to.equal(true);
+    });
+  });
 });
