@@ -46,7 +46,7 @@
     "babel-eslint": "10.1.0",
     "chai": "4.2.0",
     "coveralls": "3.1.0",
-    "eslint": "7.15.0",
+    "eslint": "7.17.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-json": "2.1.2",
@@ -54,7 +54,7 @@
     "eslint-plugin-mocha": "8.0.0",
     "js-gardener": "2.0.182",
     "nyc": "15.1.0",
-    "semantic-release": "17.3.0",
+    "semantic-release": "17.3.1",
     "babel-preset-latest-node": "5.2.0"
   },
   "licenses": [
