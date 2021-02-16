@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@babel/cli@7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.12.13.tgz#ae2c6a75fa43f3db4bca0659799b0dfca3f5212b"
-  integrity sha512-Zto3HPeE0GRmaxobUl7NvFTo97NKe1zdAuWqTO8oka7nE0IIqZ4CFvuRZe1qf+ZMd7eHMhwqrecjwc10mjXo/g==
+"@babel/cli@7.12.16":
+  version "7.12.16"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.12.16.tgz#bde5bc5118d90e539603abcd37938c5f0fd6c87a"
+  integrity sha512-cKWkNCxbpjSuYLbdeJs4kOnyW1E2D65pu7SodXDOkzahIN/wSgT8geIqf6+pJTgCo47zrOMGcJTmjSFe5WKYwQ==
   dependencies:
     commander "^4.0.1"
     convert-source-map "^1.1.0"
@@ -33,7 +33,28 @@
   dependencies:
     "@babel/highlight" "^7.12.13"
 
-"@babel/core@7.12.13", "@babel/core@^7.7.5":
+"@babel/core@7.12.16":
+  version "7.12.16"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.16.tgz#8c6ba456b23b680a6493ddcfcd9d3c3ad51cab7c"
+  integrity sha512-t/hHIB504wWceOeaOoONOhu+gX+hpjfeN6YRBT209X/4sibZQfSF1I0HFRRlBe97UZZosGx5XwUg1ZgNbelmNw==
+  dependencies:
+    "@babel/code-frame" "^7.12.13"
+    "@babel/generator" "^7.12.15"
+    "@babel/helper-module-transforms" "^7.12.13"
+    "@babel/helpers" "^7.12.13"
+    "@babel/parser" "^7.12.16"
+    "@babel/template" "^7.12.13"
+    "@babel/traverse" "^7.12.13"
+    "@babel/types" "^7.12.13"
+    convert-source-map "^1.7.0"
+    debug "^4.1.0"
+    gensync "^1.0.0-beta.1"
+    json5 "^2.1.2"
+    lodash "^4.17.19"
+    semver "^5.4.1"
+    source-map "^0.5.0"
+
+"@babel/core@^7.7.5":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.13.tgz#b73a87a3a3e7d142a66248bf6ad88b9ceb093425"
   integrity sha512-BQKE9kXkPlXHPeqissfxo0lySWJcYdEP0hdtJOH/iJfDdhOCcgtNCjftCJg3qqauB4h+lz2N6ixM++b9DN1Tcw==
@@ -58,6 +79,15 @@
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.12.13.tgz#5f6ebe6c85db99886db2d7b044409196f872a503"
   integrity sha512-9qQ8Fgo8HaSvHEt6A5+BATP7XktD/AdAnObUeTRz5/e2y3kbrxZgz32qUJJsdmwUvBJzF4AeV21nGTNwv05Mpw==
+  dependencies:
+    "@babel/types" "^7.12.13"
+    jsesc "^2.5.1"
+    source-map "^0.5.0"
+
+"@babel/generator@^7.12.15":
+  version "7.12.15"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.12.15.tgz#4617b5d0b25cc572474cc1aafee1edeaf9b5368f"
+  integrity sha512-6F2xHxBiFXWNSGb7vyCUTBF8RCLY66rS0zEPcP8t/nQyXjha5EuK4z7H5o7fWG8B4M7y6mqVWq1J+1PuwRhecQ==
   dependencies:
     "@babel/types" "^7.12.13"
     jsesc "^2.5.1"
@@ -201,6 +231,11 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.14.tgz#4adb7c5eef1d437ef965ad1569cd826db8c11dc9"
   integrity sha512-xcfxDq3OrBnDsA/Z8eK5/2iPcLD8qbOaSSfOw4RA6jp4i7e6dEQ7+wTwxItEwzcXPQcsry5nZk96gmVPKletjQ==
 
+"@babel/parser@^7.12.16":
+  version "7.12.16"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.16.tgz#cc31257419d2c3189d394081635703f549fc1ed4"
+  integrity sha512-c/+u9cqV6F0+4Hpq01jnJO+GLp2DdT63ppz9Xa+6cHaajM9VFzK/iDXiKK65YtpeVwu+ctfS6iqlMqRgQRzeCw==
+
 "@babel/plugin-proposal-nullish-coalescing-operator@^7.12.1":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-nullish-coalescing-operator/-/plugin-proposal-nullish-coalescing-operator-7.12.1.tgz#3ed4fff31c015e7f3f1467f190dbe545cd7b046c"
@@ -330,10 +365,10 @@
   dependencies:
     smart-fs "1.12.4"
 
-"@blackflux/robo-config-plugin@4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-4.0.4.tgz#1c9957f46d0bf04c2a48d1a4a990bccd304059ba"
-  integrity sha512-2z6TNyOtoqo2/wO4EKyAFrOxGfRTkFY+ZR31+2ItJi9L+1mjvybT1GDHS3W4JWPu6j/W92L1o64B2ZvTQJ2P+w==
+"@blackflux/robo-config-plugin@4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-4.0.5.tgz#5727c5a287210d525fcbe949b2ae45cd9a0a0732"
+  integrity sha512-vB43FLQj/ztTlUSIAMKsrzRyet5mdLJtBFh0cnY/kS6B6MteNjEdOgfWhA7uVDTyhvvv140kKrE31C9jqn3/Fw==
 
 "@eslint/eslintrc@^0.3.0":
   version "0.3.0"
@@ -2337,12 +2372,11 @@ eslint-plugin-json@2.1.2:
     lodash "^4.17.19"
     vscode-json-languageservice "^3.7.0"
 
-eslint-plugin-markdown@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-markdown/-/eslint-plugin-markdown-1.0.2.tgz#79274bf17ce3ead48e4a55cbcb6d7ce735754280"
-  integrity sha512-BfvXKsO0K+zvdarNc801jsE/NTLmig4oKhZ1U3aSUgTf2dB/US5+CrfGxMsCK2Ki1vS1R3HPok+uYpufFndhzw==
+eslint-plugin-markdown@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-markdown/-/eslint-plugin-markdown-2.0.0.tgz#cd650beda2b599cd9e4535ea369266b5d0e49d23"
+  integrity sha512-zt10JoexHeJFMTE5egDcetAJ34bn5k/92s0wAuRZfhDAyI0ryEj+O91JL2CbBExajie6BE5L63y47dN1Sbp6mQ==
   dependencies:
-    object-assign "^4.0.1"
     remark-parse "^5.0.0"
     unified "^6.1.2"
 
