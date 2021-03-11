@@ -1,4 +1,4 @@
-const Joi = require('@hapi/joi').defaults((schema) => schema.options({
+const Joi = require('joi').defaults((schema) => schema.options({
   presence: 'required',
   convert: true
 }));
