@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const JoiOriginal = require('@hapi/joi');
+const JoiOriginal = require('joi');
 const Joi = require('../src/index');
 
 describe('Testing Strict Mode', () => {
