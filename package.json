@@ -100,6 +100,6 @@
     "tempDir": "./coverage/.nyc_output"
   },
   "dependencies": {
-    "joi": "17.4.0"
+    "joi": "17.4.1"
   }
 }
