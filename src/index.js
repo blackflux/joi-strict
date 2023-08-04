@@ -1,9 +1,11 @@
-const Joi = require('joi').defaults((schema) => schema.options({
+import Joi_ from 'joi';
+
+const Joi = Joi_.defaults((schema) => schema.options({
   presence: 'required',
   convert: true
 }));
 
-module.exports = {
+export default {
   test: (object, schema) => {
     if (!Joi.isSchema(schema)) {
       throw new Error(`Not a Joi schema: ${typeof schema === 'string' ? schema : JSON.stringify(schema)}`);

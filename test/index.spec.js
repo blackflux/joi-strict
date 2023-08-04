@@ -1,6 +1,6 @@
-const expect = require('chai').expect;
-const JoiOriginal = require('joi');
-const Joi = require('../src/index');
+import { expect } from 'chai';
+import JoiOriginal from 'joi';
+import Joi from '../src/index.js';
 
 describe('Testing Strict Mode', () => {
   const validated = (schema, input, expectedErrorMessage = null) => {
