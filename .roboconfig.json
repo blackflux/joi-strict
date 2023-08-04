@@ -8,9 +8,10 @@
       "packageName": "joi-strict",
       "projectName": "joi-strict",
       "owner": "simlu",
-      "nodeVersion": "12",
+      "nodeVersion": "16",
       "ownerName": "Lukas Siemon",
-      "mergeBot": "MrsFlux"
+      "mergeBot": "MrsFlux",
+      "nccEnabled": false
     }
   }
 }
